@@ -1,0 +1,188 @@
+:root {
+  --bg: #121212;
+  --bg2: #1a1a1a;
+  --accent: #4caf82;
+  --text: #e6e6e6;
+  --muted: #a0a0a0;
+  --border: #2b2b2b;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, Arial, sans-serif;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #0d0d0d;
+}
+
+.btn-accent:hover {
+  background-color: #3d9268;
+  border-color: #3d9268;
+  color: #0d0d0d;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg2);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 1rem;
+  background-color: var(--bg2);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-eyebrow {
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Secciones */
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.section-categorias,
+.section-paquetes,
+.section-presupuesto {
+  padding: 3rem 1rem;
+}
+
+/* Acordeón (colores oscuros) */
+.accordion-item {
+  background-color: var(--bg2);
+  border-color: var(--border);
+}
+
+.accordion-button {
+  background-color: var(--bg2);
+  color: var(--text);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #202f28;
+  color: var(--accent);
+}
+
+.accordion-body {
+  color: var(--muted);
+}
+
+/* Paquetes */
+.card-paquete {
+  background-color: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.card-paquete .precio {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin: 0.5rem 0;
+}
+
+.card-paquete .detalle {
+  color: var(--muted);
+}
+
+/* Trabajos (portafolio) */
+.card-trabajo {
+  background-color: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-trabajo-categoria {
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.card-trabajo-desc {
+  color: var(--muted);
+  flex-grow: 1;
+}
+
+.card-trabajo-precio {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Modal */
+.modal-content {
+  background-color: var(--bg2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Formularios */
+.form-presupuesto,
+.form-wrapper {
+  max-width: 600px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 3rem 1rem 1.5rem;
+}
+
+.footer-logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+/* Responsivo: ajustes en mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+}
