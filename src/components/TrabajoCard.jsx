@@ -4,6 +4,14 @@ export default function TrabajoCard({ trabajo, onVerDetalle, onEliminar }) {
   return (
     <div className="col-12 col-sm-6 col-lg-4">
       <div className="card-trabajo h-100">
+        {trabajo.imagenes && trabajo.imagenes.length > 0 && (
+          <img
+            src={trabajo.imagenes[0]}
+            alt={trabajo.nombre}
+            className="card-trabajo-img"
+            onError={(e) => (e.target.style.display = 'none')}
+          />
+        )}
         <div className="card-trabajo-categoria">{trabajo.categoria}</div>
         <h3>{trabajo.nombre}</h3>
         <p className="card-trabajo-desc">{trabajo.descripcion}</p>

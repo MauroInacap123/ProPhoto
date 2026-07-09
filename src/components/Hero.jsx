@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 export default function Hero() {
   return (
     <header className="hero">
-      <div className="container text-center">
+      <div className="hero-overlay"></div>
+      <div className="container text-center hero-content">
         <p className="hero-eyebrow">Fotografía profesional en Santiago</p>
         <h1 className="hero-title">
           Capturamos momentos <br />
